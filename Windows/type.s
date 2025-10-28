@@ -123,8 +123,8 @@ loop:				# Start of the loop function
 	# rsp in the second argument, and put 1 in the third argument
 	# A 1 in the first argument is shorthand for the screen
 
-	moc rdi, 1
-	move rsi, rsp
+	mov rdi, 1
+	mov rsi, rsp
 	mov rdx, 1
 	mov	rax, 1		# Put 1 (write) into function number
 	syscall			# Call write with 3 arguments
@@ -134,7 +134,7 @@ loop:				# Start of the loop function
 	# should go to the error function because it means something
 	# bad happened.
 
-	comp rax, 1
+	cmp rax, 1
 	jne error
 	
 	# Last sub-problem for the loop function: if we got all the
@@ -148,7 +148,7 @@ done:				# Start of the done function
 	# Here, put 0 into the first argument
 	# If a program exits with 0, that means it was successful
 
-	move rdi, 0
+	mov rdi, 0
 	mov	rax, 60		# Put 60 (exit) into function number
 	syscall			# Call exit with an argument of 0
 error:				# Start of the error function
