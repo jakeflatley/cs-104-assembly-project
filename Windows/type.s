@@ -57,7 +57,7 @@ main:				# Start of the main function
 	# How did we say to do that in class?
 	# The second argument is always put into the rsi register
 
-	mov rdi, 0
+	mov rsi, 0
 	mov	rax, 2		# Put 2 (open) into function number
 	syscall			# Call open with 2 arguments
 
