@@ -75,7 +75,7 @@ main:				# Start of the main function
 	# class, it needs to be the rbx register; come talk to me
 	# during office hours if you are curious why).
 
-	mov rdx, rax
+	mov rbx, rax
 	
 	# The last sub-problem to solve in the main function is to give
 	# ourselves some space to store the letters we read from the file.
